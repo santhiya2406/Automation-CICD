@@ -9,13 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Login Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">10</td><td>PlaceOrder</td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">PlaceOrder Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,352</td><td>PlaceOrder</td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">5,362</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Retry Test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">65</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">PlaceOrder Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Santhiya.Tests.PlaceOrderTest</td><td><a href="#m0">addToCart</a></td><td rowspan="1">1749570208238</td><td rowspan="1">1400</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Retry Test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">Santhiya.Tests.RetryAnalyzerTest</td><td><a href="#m0">retryTestExample</a></td><td rowspan="1">1750096503360</td><td rowspan="1">21</td></tr><tr><th colspan="4">Retry Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Santhiya.Tests.RetryAnalyzerTest</td><td><a href="#m1">retryTestExample</a></td><td rowspan="1">1750096503388</td><td rowspan="1">2</td></tr></tbody>
 </table>
-<h2>Login Test</h2><h2>PlaceOrder Test</h2><h3 id="m0">Santhiya.Tests.PlaceOrderTest#addToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{firstname=Santhiya, postalCode=613101, lastname=Selvam}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Retry Test</h2><h3 id="m0">Santhiya.Tests.RetryAnalyzerTest#retryTestExample</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Failed first attempt expected [true] but found [false]
+	at Santhiya.Tests.RetryAnalyzerTest.retryTestExample(RetryAnalyzerTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Santhiya.Tests.RetryAnalyzerTest#retryTestExample</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

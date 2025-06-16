@@ -52,7 +52,11 @@ public class BaseTest {
 		}
 		else if(browserName.equalsIgnoreCase("chrome"))
 		{
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			if (browserName.contains("headless")) {
+				options.addArguments("--headless=new");
+			}
+			driver = new ChromeDriver(options);
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

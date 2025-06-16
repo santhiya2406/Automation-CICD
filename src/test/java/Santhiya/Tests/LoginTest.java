@@ -1,16 +1,13 @@
 package Santhiya.Tests;
 
 import org.testng.annotations.Test;
-
-//import com.sun.net.httpserver.Authenticator.Retry;
-
 import Santhiya.TestComponents.BaseTest;
-import Santhiya.TestComponents.Retry_;
 import Santhiya.pageobjects.LoginPage;
 import org.testng.Assert;
 
-public class LoginTest extends BaseTest{
 
+public class LoginTest extends BaseTest{
+	
 	@Test
 	public void validLogin()
 	{
@@ -19,13 +16,12 @@ public class LoginTest extends BaseTest{
 		Assert.assertTrue(currentUrl.contains("inventory"));
 	}
 	
-	@Test(retryAnalyzer = Retry_.class)
+	@Test
 	public void invalidLogin()
 	{
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.loginApplication("standard_user", "secret_auce");
 		String errorMessage = loginpage.errorMessage();
-		Assert.assertFalse(errorMessage.equalsIgnoreCase("Epic sadface: Username and password do not match any user in this service"));
+		Assert.assertTrue(errorMessage.equalsIgnoreCase("Epic sadface: Username and password do not match any user in this service"));
 	}
-	
 }

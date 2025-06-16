@@ -4,11 +4,11 @@
 <listeners>
 	<listener class-name="Santhiya.TestComponents.Listeners"/>
 </listeners>
-<groups>
+<!--<groups>
 	<run>
 		<include name="PlaceOrder"/>
 	</run>
-</groups>
+</groups>-->
 
  <test thread-count="5" name="Login Test">
     <classes>
@@ -21,6 +21,7 @@
       <class name="Santhiya.Tests.PlaceOrderTest"/>
     </classes>
   </test>
+  
   
    <!-- Test -->
 </suite> <!-- Suite -->
